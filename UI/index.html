@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="Assets/css/free.css">
+  <Script src="Assets/.js"></script>
+</head>
+
+<body background="Assets/images/hotel.jpg" width="110" height="140">
+  <div class="topnav">
+    <h1> FAST-FOOD-FAST</h1>
+  </div>
+ 
+  
+  <h2> AT FAST-FOOd-FAST, WE PROVIDE FRESH</h2>
+</body>
+<H2> FAST AND AFFORDABLE FINGER LICKING MEALS </h2>
+
+<div class="display">
+  <div class="gallery">
+    <img src="Assets/images/r.jpeg" alt="5Terre" width="50" height="50">
+  </div>
+  <div class="gallery">
+    <img src="Assets/images/e.jpeg" alt="Forest" width="50" height="50">
+  </div>
+  <div class="gallery">
+    <img src="Assets/images/z.jpeg" alt="Forest" width="50" height="50">
+  </div>
+</div>
+<div class="business">
+    <p>Whatever your occasion, we make it one to remember!.
+        Always remember you are one click away from your favourite dish
+        Login or sign up now and enjoy your delicious meal at an affordable price. To access our services login or sign up using the link below
+      </p>
+      <button class = "login" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login/Sign</button>
+</div>
+
+<div id="id02" class="modal">
+  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form action="/action_page.php">
+    <div class="row">
+      <h2 style="text-align:center">FAST-FOOD-FAST</h2>
+      <div class="vl">
+        <span class="vl-innertext">or</span>
+      </div>
+
+      <div class="col">
+          <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value="Login">
+      </div>
+
+      <div class="col">
+        <div class="hide-md-lg">
+          <p>Or sign in manually:</p>
+        </div>
+        <input type="text" name="username" autocomplete="off" placeholder="Username" required>
+        <input type="text" name="email" autocomplete="off" placeholder="Email" required>
+        <input type="text" name="username" autocomplete="off" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value=" SignUp">
+      </div>
+      
+    </div>
+  </form>
+</div>
+
+</body>
+
+</html>
