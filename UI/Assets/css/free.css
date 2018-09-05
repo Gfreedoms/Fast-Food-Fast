@@ -308,6 +308,7 @@ select{
 
 /* Style the buttons inside the tab */
 .tab button {
+    color: white;
     background-color: inherit;
     float: left;
     border: none;
