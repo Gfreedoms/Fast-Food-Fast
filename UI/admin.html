@@ -14,56 +14,101 @@
     </div>
     <H3> ADMIN PANEL </h3>
     <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'London')">London</button>
-        <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+        <button class="tablinks" onclick="openPanel(event, 'Orders')" id="defaultOpen">Orders Online</button>
+        <button class="tablinks" onclick="openPanel(event, 'processOrder')">process Order</button>
+        <button class="tablinks" onclick="openPanel(event, 'MarkOrder')">Mark Order</button>
     </div>
-    <div id="London" class="tabcontent">
-        <div class="galleryh"></div>
-        <img src="Assets/images/6.jpg" alt="5Terre" width="50" height="50">
-        <div class="desc"> <button class="login" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Order</button></div>
-    </div>
-    <div class="galleryh">
-        <img src="Assets/images/7.jpg">
-        <div class="desc"> <button class="login" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Order</button></div>
-    </div>
-    <div class="galleryh">
-        <img src="Assets/images/8.jpg">
-        <div class="desc"> <button class="login" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Order</button></div>
-    </div>
-    </div>
-
-    <div id="Paris" class="tabcontent">
+    <div id="Orders" class="tabcontent">
         <div class="galleryh">
             <img src="Assets/images/6.jpg">
-            <div class="desc"> <button class="login" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Order</button></div>
+            <div class="desc">
+                <dl>
+                    <dt>Quantity</dt>
+                    <dd>4 pieces</dd>
+                    <dt>Size</dt>
+                    <dd>King Size</dd>
+                </dl>
+            </div>
         </div>
         <div class="galleryh">
             <img src="Assets/images/7.jpg">
-            <div class="desc"> <button class="login" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Order</button></div>
+            <div class="desc">
+                <dl> <dt>Quantity</dt> <dd>4 pieces</dd> <dt>Size</dt> <dd>King Size</dd>
+                </dl>
+            </div>
         </div>
         <div class="galleryh">
             <img src="Assets/images/8.jpg">
-            <div class="desc"> <button class="login" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Order</button></div>
+            <div class="desc">
+                <dl> <dt>Quantity</dt> <dd>4 pieces</dd> <dt>Size</dt> <dd>King Size</dd>
+                </dl>
+            </div>
         </div>
-    </div>
-
-    <div id="Tokyo" class="tabcontent">
         <div class="galleryh">
             <img src="Assets/images/6.jpg" alt="5Terre" width="50" height="50">
-            <div class="desc"> <button class="login" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Order</button></div>
+            <div class="desc">
+                <dl> <dt>Quantity</dt> <dd>4 pieces</dd> <dt>Size</dt> <dd>King Size</dd>
+                </dl>
+            </div>
         </div>
         <div class="galleryh">
             <img src="Assets/images/7.jpg">
-            <div class="desc"> <button class="login" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Order</button></div>
+            <div class="desc">
+                <dl> <dt>Quantity</dt> <dd>4 pieces</dd> <dt>Size</dt> <dd>King Size</dd>
+                </dl>
+            </div>
         </div>
         <div class="galleryh">
             <img src="Assets/images/8.jpg">
-            <div class="desc"> <button class="login" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Order</button></div>
+            <div class="desc">
+                <dl> <dt>Quantity</dt> <dd>4 pieces</dd> <dt>Size</dt> <dd>King Size</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <div id="processOrder" class="tabcontent">
+        <div class="galleryh">
+            <img src="Assets/images/6.jpg">
+            <div class="desc">
+                <dl> <dt>Quantity</dt> <dd>4 pieces</dd> <dt>Size</dt> <dd>King Size</dd>
+                </dl>
+            </div>
+        </div>
+        <div class="galleryh">
+            <img src="Assets/images/7.jpg">
+            <div class="desc">
+                <dl> <dt>Quantity</dt> <dd>4 pieces</dd> <dt>Size</dt> <dd>King Size</dd>
+                </dl>
+            </div>
+        </div>
+        <div class="galleryh">
+            <img src="Assets/images/8.jpg">
+            <div class="desc">
+                <dl> <dt>Quantity</dt> <dd>4 pieces</dd> <dt>Size</dt> <dd>King Size</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <div id="MarkOrder" class="tabcontent">
+        <div class="galleryh">
+            <img src="Assets/images/6.jpg" alt="5Terre" width="50" height="50">
+            <div class="desc"> </div>
+        </div>
+        <div class="galleryh">
+            <img src="Assets/images/7.jpg">
+            <div class="desc"> </div>
+        </div>
+        <div class="galleryh">
+            <img src="Assets/images/8.jpg">
+            <div class="desc"> </div>
         </div>
     </div>
     </div>
-
+    <script>
+        document.getElementById("defaultOpen").click();
+    </script>
 </body>
 
 </html>
