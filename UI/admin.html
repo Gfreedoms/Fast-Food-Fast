@@ -1,40 +1,69 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="Assets/css/free.css">
-<Script src="Assets/js/admin.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="Assets/css/free.css">
+    <script src="Assets/js/admin.js"></script>
 </head>
+
 <body>
+    <div class="topnav">
+        <h1>
+            FAST-FOOD-FAST</h1>
+    </div>
+    <H3> ADMIN PANEL </h3>
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+    </div>
+    <div id="London" class="tabcontent">
+        <div class="galleryh"></div>
+        <img src="Assets/images/6.jpg" alt="5Terre" width="50" height="50">
+        <div class="desc"> <button class="login" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Order</button></div>
+    </div>
+    <div class="galleryh">
+        <img src="Assets/images/7.jpg">
+        <div class="desc"> <button class="login" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Order</button></div>
+    </div>
+    <div class="galleryh">
+        <img src="Assets/images/8.jpg">
+        <div class="desc"> <button class="login" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Order</button></div>
+    </div>
+    </div>
 
-<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
-<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
-<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
-<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+    <div id="Paris" class="tabcontent">
+        <div class="galleryh">
+            <img src="Assets/images/6.jpg">
+            <div class="desc"> <button class="login" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Order</button></div>
+        </div>
+        <div class="galleryh">
+            <img src="Assets/images/7.jpg">
+            <div class="desc"> <button class="login" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Order</button></div>
+        </div>
+        <div class="galleryh">
+            <img src="Assets/images/8.jpg">
+            <div class="desc"> <button class="login" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Order</button></div>
+        </div>
+    </div>
 
-<div id="Home" class="tabcontent">
-  <h3>Home</h3>
-  <p>Home is where the heart is..</p>
-</div>
+    <div id="Tokyo" class="tabcontent">
+        <div class="galleryh">
+            <img src="Assets/images/6.jpg" alt="5Terre" width="50" height="50">
+            <div class="desc"> <button class="login" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Order</button></div>
+        </div>
+        <div class="galleryh">
+            <img src="Assets/images/7.jpg">
+            <div class="desc"> <button class="login" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Order</button></div>
+        </div>
+        <div class="galleryh">
+            <img src="Assets/images/8.jpg">
+            <div class="desc"> <button class="login" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Order</button></div>
+        </div>
+    </div>
+    </div>
 
-<div id="News" class="tabcontent">
-  <h3>News</h3>
-  <p>Some news this fine day!</p> 
-</div>
-
-<div id="Contact" class="tabcontent">
-  <h3>Contact</h3>
-  <p>Get in touch, or swing by for a cup of coffee.</p>
-</div>
-
-<div id="About" class="tabcontent">
-  <h3>About</h3>
-  <p>Who we are and what we do.</p>
-</div>
-
-<script>
-
-</script>
-     
 </body>
-</html> 
+
+</html>
