@@ -15,11 +15,12 @@
     border-top: none;
     margin-right: 20%;
     background-color: white;
-    color: black;
+    color: rgb(235, 189, 189);
     margin-left: 20%;
 }
 div.desc {
-    color:black;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:bl;
     background-color:white;
 }
 .desc button{
@@ -100,7 +101,7 @@ input[type=password] {
     margin: 5px 0 22px 0;
     display: inline-block;
     border: none;
-    background: #f1f1f1;
+    background: #f2f2f2;
 }
 
 /* Add a background color when the inputs get focus */
@@ -122,6 +123,7 @@ button {
     cursor: pointer;
     width: 100%;
     opacity: 0.9;
+    border-radius: 12px;
 }
 
 button:hover {
@@ -158,11 +160,39 @@ button:hover {
     left: 0;
     top: 0;
     width: 30%;
-    height: 30%;
-    background-color: #676f69fc;
+    background-color: #666;
+    margin-left: 300px;
+    margin-top: 30px;
+    height: 70%;
+    width: 50%;
+}
+
+.modal1 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 30%;
+    background-color: #666;
     margin-left: 300px;
     margin-top: 10px;
-    height: 80%;
+    height: 60%;
+    width: 50%;
+}
+
+.modal4 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 30%;
+    height: auto;
+    background-color: #666;
+    margin-left: 300px;
+    margin-top: 10%;
+ 
     width: 50%;
 }
 
@@ -348,12 +378,127 @@ select{
     font-size: 17px;
     width: 25%;
 }
+dl{
+    background-color:white;
+    color:black;
+}
 
-/* .tablink:hover {
-    background-color: #777;
-} */
+.free{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
 
-/* Style the tab content (and add height:100% for full page content) */
+.button2 {background-color: red;} /* Blue */
+.button3 {background-color:#e7e7e7;}
 
+.Status {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
+/* Hide the browser's default radio button */
+.Status input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
 
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.Status:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.Status input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.Status input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.Status .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height:6%;
+    width: 100%;
+    background-color: #403c3d;
+    color: white;
+    text-align: center;
+}
+div.hist{
+    margin-right: 2%;
+    float:right;
+}
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.admin{
+    float:right;
+}
