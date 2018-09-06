@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="Assets/css/free.css">
     <script src="Assets/js/admin.js"></script>
+    <script src="Assets/js/free.js"></script>
 </head>
 
 <body>
@@ -20,6 +21,7 @@
     </div>
     <div id="Orders" class="tabcontent">
         <div class="galleryh">
+            <div class="desc">Potato Bread</div>
             <img src="Assets/images/6.jpg">
             <div class="desc">
                 <dl>
@@ -31,6 +33,7 @@
             </div>
         </div>
         <div class="galleryh">
+            <div class="desc">Bagel and Lox</div>
             <img src="Assets/images/7.jpg">
             <div class="desc">
                 <dl> <dt>Quantity</dt> <dd>4 pieces</dd> <dt>Size</dt> <dd>King Size</dd>
@@ -38,6 +41,7 @@
             </div>
         </div>
         <div class="galleryh">
+            <div class="desc">Toast Bread</div>
             <img src="Assets/images/8.jpg">
             <div class="desc">
                 <dl> <dt>Quantity</dt> <dd>4 pieces</dd> <dt>Size</dt> <dd>King Size</dd>
@@ -45,13 +49,15 @@
             </div>
         </div>
         <div class="galleryh">
-            <img src="Assets/images/6.jpg" alt="5Terre" width="50" height="50">
+           <div class="desc">Toast Bread</div>
+            <img src="Assets/images/6.jpg" >
             <div class="desc">
                 <dl> <dt>Quantity</dt> <dd>4 pieces</dd> <dt>Size</dt> <dd>King Size</dd>
                 </dl>
             </div>
         </div>
         <div class="galleryh">
+            <div class="desc">Toast Bread</div>
             <img src="Assets/images/7.jpg">
             <div class="desc">
                 <dl> <dt>Quantity</dt> <dd>4 pieces</dd> <dt>Size</dt> <dd>King Size</dd>
@@ -59,6 +65,7 @@
             </div>
         </div>
         <div class="galleryh">
+            <div class="desc">Toast Bread</div>
             <img src="Assets/images/8.jpg">
             <div class="desc">
                 <dl> <dt>Quantity</dt> <dd>4 pieces</dd> <dt>Size</dt> <dd>King Size</dd>
@@ -69,30 +76,40 @@
 
     <div id="processOrder" class="tabcontent">
         <div class="galleryh">
+            <div class="desc">Potato Bread</div>
             <img src="Assets/images/6.jpg">
             <div class="desc">
                 <dl> <dt>Quantity</dt> <dd>4 pieces</dd> <dt>Size</dt> <dd>King Size</dd>
                 </dl>
+                <button class="free">Accept</button>
+                <button class="free button2">Reject</button>
             </div>
         </div>
         <div class="galleryh">
+            <div class="desc">Toast Bread</div>
             <img src="Assets/images/7.jpg">
             <div class="desc">
                 <dl> <dt>Quantity</dt> <dd>4 pieces</dd> <dt>Size</dt> <dd>King Size</dd>
                 </dl>
+                <button class="free">Accept</button>
+                <button class="free button2">Reject</button>
             </div>
         </div>
         <div class="galleryh">
+            <div class="desc">Fries with Eggs</div>
             <img src="Assets/images/8.jpg">
             <div class="desc">
                 <dl> <dt>Quantity</dt> <dd>4 pieces</dd> <dt>Size</dt> <dd>King Size</dd>
                 </dl>
+                <button class="free" onclick="document.getElementById('id02').style.display='block'" style="width:auto;" >Accept</button>
+                <button class="free button2" >Reject</button>
             </div>
         </div>
     </div>
 
     <div id="MarkOrder" class="tabcontent">
         <div class="galleryh">
+            <div class="desc">Potato Bread</div>
             <img src="Assets/images/6.jpg" alt="5Terre" width="50" height="50">
             <div class="desc"> </div>
         </div>
@@ -101,11 +118,48 @@
             <div class="desc"> </div>
         </div>
         <div class="galleryh">
+            <div class="desc">Potato Bread</div>
             <img src="Assets/images/8.jpg">
             <div class="desc"> </div>
         </div>
     </div>
     </div>
+    <div id="id02" class="modal">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <div class="row">
+                    <h2 style="text-align:center">FAST-FOOD-FAST</h2>
+                    <div class="vl">
+                        <span class="vl-innertext">Grab it now</span>
+                    </div>
+    
+                    <div class="col">
+                            <div class="galleryh">
+                                    <div class="desc">Potato Bread</div>
+                                    <img src="Assets/images/6.jpg">
+                                    <div class="desc">
+                                        <dl> <dt>Quantity</dt> <dd>4 pieces</dd> <dt>Size</dt> <dd>King Size</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                    </div>
+    
+                    <div class="col">
+                            <i>Mark Order</i>
+                        <p>
+                           <label class="Status">Completed
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="Status">Pending
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                              </label>
+                        </p>
+    
+                    </div>
+    
+                </div>
+        </div>
     <script>
         document.getElementById("defaultOpen").click();
     </script>
