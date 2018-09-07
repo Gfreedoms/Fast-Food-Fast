@@ -9,6 +9,9 @@
 <body background="">
     <div class="topnav">
         <h1> FAST-FOOD-FAST</h1>
+        <div class="hist">
+                <button class="login" onclick="document.getElementById('id04').style.display='block'" style="width:auto;">Order History</button>
+        </div>
     </div>
     <div id="Bf" class="displayh">
         <div class="galleryh">
@@ -156,8 +159,46 @@
         </form>
     </div>
 
+    <div id="id04" class="modal4">
+            <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <h2 style="text-align:center">Order History</h2>
+            <table id="customers">
+                    <tr>
+                      <th>Food Item</th>
+                      <th>Quantity</th>
+                      <th>Size</th>
+                    </tr>
+                    <tr>
+                      <td>French fries</td>
+                      <td>5 pieces</td>
+                      <td>King Size</td>
+                    </tr>
+                      <tr>
+                      <td>Toast bread</td>
+                      <td>1 pieces</td>
+                      <td>King Size</td>
+                    </tr>
+                      <tr>
+                      <td>Chicken Pie</td>
+                       <td>3 Pieces</td>
+                      <td>Ordinary</td>
+                    </tr>
+                      <tr>
+                      <td>Toast bread</td>
+                      <td>4 pieces</td>
+                      <td>Mega</td>
+                    </tr>
+                                   
+                    </tr>
+                  </table>
+ </div>
+    
+
+    
+    
+
     <div class="footer">
-            <p>Footer</p>
+            <p>Fast-FOOD_FAST</p>
           </div>
 </body>
 
