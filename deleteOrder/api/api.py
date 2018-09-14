@@ -71,8 +71,6 @@ class Order(Resource):
         ORDER_MANAGER.delete_order(order_id)
         return '', status.HTTP_204_NO_CONTENT
 
-
-
 API.add_resource(Order, '/API/v1/orders/<int:order_id>',
                  endpoint='Order_endpoint')
 
