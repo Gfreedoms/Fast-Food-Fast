@@ -1,9 +1,9 @@
-""" api.py"""
-import unittest
-import os
-import json
+# """ api.py"""
+# import unittest
+# import os
+# import json
 
-class FastFoodFast(unittest.TestCase):
+# class FastFoodFast(unittest.TestCase):
 
     # def setUp(self):
     #     self.APP = APP.test_client()
@@ -26,6 +26,6 @@ class FastFoodFast(unittest.TestCase):
 
 
 
-"""Make the tests conveniently executable"""
-if __name__ == "__main__":
-    unittest.main()
+# """Make the tests conveniently executable"""
+# if __name__ == "__main__":
+#     unittest.main()
