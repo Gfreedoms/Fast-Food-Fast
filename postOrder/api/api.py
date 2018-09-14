@@ -39,31 +39,6 @@ class OrderManager():
         order.order_id = self.__class__.last_order_id
         self.orders[self.__class__.last_order_id] = order
 
-    def update_order(self, order):
-        """
-       create method to update an existing order
-       """
-        order.order_id = self.__class__.last_order_id
-        self.orders[self.__class__.last_order_id] = order
-
-    def get_order(self, order_id):
-        """
-       create method to handle getting orders
-       """
-        return self.orders[order_id]
-
-    def delete_order(self, order_id):
-        """
-       create method to delete order of a given order_id
-       """
-        del self.orders[order_id]
-
-    def put_order(self, order_id):
-        """
-        update a given order
-        """
-        return self.orders[order_id]
-
 
 ORDER_FIELDS = {
     'order_id': fields.Integer,
@@ -90,53 +65,9 @@ class Order(Resource):
             abort(status.HTTP_404_NOT_FOUND,
                   error="order {0} doesn't exist".format(order_id))
 
-    @marshal_with(ORDER_FIELDS)
-    def get(self, order_id):
-        """
-        method to retrieve orders
-        """
-        self.abort_if_order_doesnt_exist(order_id)
-        return ORDER_MANAGER.get_order(order_id)
-
-    def delete(self, order_id):
-        """
-        create the delete method to pick order
-        """
-        self.abort_if_order_doesnt_exist(order_id)
-        ORDER_MANAGER.delete_order(order_id)
-        return '', status.HTTP_204_NO_CONTENT
-
-    @marshal_with(ORDER_FIELDS)
-    def put(self, order_id):
-        """
-        create method to update orders
-        """
-        self.abort_if_order_doesnt_exist(order_id)
-        parser = reqparse.RequestParser()
-        parser.add_argument('title', type=str)
-        parser.add_argument('pieces', type=int)
-        parser.add_argument('quantity', type=str)
-        args = parser.parse_args()
-        order = OrderModel(
-            title=args['title'],
-            pieces=args['pieces'],
-            quantity=args['quantity']
-        )
-        ORDER_MANAGER.update_order(order)
-        return ORDER_MANAGER.put_order(order_id)
 
 
 class OrderList(Resource):
-
-    """
-    Create the orderlist method that inherits from clas resource
-    """
-    @marshal_with(ORDER_FIELDS)
-    def get(self):
-        """
-        Add the get method that returns an array order values
-        """
-        return [v for v in ORDER_MANAGER.orders.values()]
 
     @marshal_with(ORDER_FIELDS)
     def post(self):
