@@ -29,8 +29,8 @@ class OrderManager():
     def delete_order(self, id):
         del self.orders[id]
     
-    # def put_order(self, id):
-    #    return self.orders[id]
+    def put_order(self, id):
+      return self.orders[id]
    
     
 
@@ -69,7 +69,6 @@ class Order(Resource):
     @marshal_with(order_fields)
     def put(self, id):
         self.abort_if_order_doesnt_exist(id)
-        Order = Order_manager.get_order(id)
         parser = reqparse.RequestParser()
         parser.add_argument('title', type=str)
         parser.add_argument('pieces', type=int)
@@ -81,7 +80,7 @@ class Order(Resource):
             quantity=args['quantity']
         )
         Order_manager.update_order(order)
-        return Order
+        return Order_manager.put_order(id)
 
 
 class OrderList(Resource):
