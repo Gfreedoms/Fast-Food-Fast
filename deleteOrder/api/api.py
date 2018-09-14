@@ -49,7 +49,6 @@ ORDER_FIELDS = {
 
 ORDER_MANAGER = OrderManager()
 
-
 class Order(Resource):
     """
     class to handle resource routing
