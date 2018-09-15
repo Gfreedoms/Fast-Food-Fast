@@ -7,7 +7,6 @@ script:
   - py.test --cov=app/
   -coveralls 
   -coverage
-  
 after_success:
   -coveralls
  
