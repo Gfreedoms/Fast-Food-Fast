@@ -4,7 +4,7 @@ python:
 install:
   - pip install -r requirements.txt
 script:
-  - py.test --cov-config .coveragerc    tests/
+  - py.test --cov-config .coveragerc --cov=app   tests/
   - coverage report
 after_success:
   - coveralls
