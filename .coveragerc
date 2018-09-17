@@ -1,17 +1,7 @@
-omit =
-[report]
-    */python/*
-    */werkzeug/*
-    */jinja2/*
-    */flask/*
-    */markupsafe/*
-    */venv/*
-    */.vscode/*
-    *__init__*
-
 [run]
-branch = true
-include = */scrapy/*
-omit =
-    tests/*
-    scrapy/xlib/*
+source=
+   ./api/
+omit=
+   ./venv/*,
+   ./api/tests/*,
+   ./api*\__init__.py
