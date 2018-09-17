@@ -5,7 +5,10 @@ import json
 
 class TestGetOrders(unittest.TestCase):
 
-    def test_get_all_endpoint(self):
+    def test_get_all_ordes(self):
+        """
+        test the endpoint for retrieving all the orders
+        """
         test_client = app.test_client()
         test_client.post('/api/v1/orders', data=json.dumps(dict(
             order_number="order_number", order_description="order_description",
