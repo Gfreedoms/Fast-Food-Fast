@@ -9,4 +9,15 @@ script:
   -coverage
 after_success:
   -coveralls
+# blacklist
+branches:
+  except:
+    - develop
+   
+
+# whitelist
+branches:
+  only:
+    - api
+     
  
