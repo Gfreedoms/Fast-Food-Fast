@@ -1,6 +1,6 @@
 [run]
 source=
-   ./api/
+   ./app/
 omit=
    ./venv/*,
    ./api/tests/*,
