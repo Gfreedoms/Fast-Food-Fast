@@ -4,7 +4,7 @@ Fast-Food-Fast is a food delivery service app for a restaurant.
 
 ### Badges
 [![Build Status](https://travis-ci.com/Gfreedoms/Fast-Food-Fast.svg?branch=api)](https://travis-ci.com/Gfreedoms/Fast-Food-Fast)
-[![Coverage Status](https://coveralls.io/repos/github/Gfreedoms/Fast-Food-Fast/badge.svg)](https://coveralls.io/github/Gfreedoms/Fast-Food-Fast)
+[![Coverage Status](https://coveralls.io/repos/github/Gfreedoms/Fast-Food-Fast/badge.svg?branch=api)](https://coveralls.io/github/Gfreedoms/Fast-Food-Fast)
 
 # APIs
 
