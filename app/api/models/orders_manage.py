@@ -27,17 +27,6 @@ class CustomerOrders:
     def __init__(self):
         self.orders_list = []
 
-    def place_order(self, new_order: Order):
-        """
-        assigns id to new order and adds it to orders list
-        """
-
-        if len(self.orders_list) >= 0:
-            new_order.order_id = len(self.orders_list)
-        else:
-            new_order.order_id = 0
-        self.orders_list.append(new_order)
-
     def get_orders(self):
         """
         Retrieve all orders
