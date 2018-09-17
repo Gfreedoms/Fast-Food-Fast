@@ -3,6 +3,7 @@
 Fast-Food-Fast is a food delivery service app for a restaurant.
 
 ### Badges
+[![Build Status](https://travis-ci.com/Gfreedoms/Fast-Food-Fast.svg?branch=api)](https://travis-ci.com/Gfreedoms/Fast-Food-Fast)
 
 # APIs
 
