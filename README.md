@@ -22,7 +22,7 @@ These are the endpoints
 | ------ | :---------------- | -------------------------------------------------------------------- | -------------------------------------------------------------- |
 | GET    | /api/v1/orders/   | Get all orders                                                       |                                                                |
 | GET    | /api/v1/orders/id | Get specific orders using an id                                      |                                                                |
-| POST   | /api/v1/orders    | Place a new orders                                                   | order_title, order_description ,order_price ,size |
+| POST   | /api/v1/orders    | Place a new orders                                                   | order_number, order_description ,order_price ,size |
 | PUT    | /api/v1/orders/id | Update a specific orders status to 'complete', | order_status                                                   |
 | DELETE | /api/v1/orders/id |delete a specific order                                 |                                                                |
 
