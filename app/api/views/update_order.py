@@ -1,11 +1,14 @@
-from flask import Blueprint, request, jsonify, json
-from app.api.models import Order, CustomerOrders, FeedbackResponse
+"""
+nodule to handle order update 
+"""
+from flask import Blueprint, request
+from app.api.models import FeedbackResponse
 from app.api.views.customer_orders import customer_orders
 
-fastfood_update_order_status = Blueprint('update_order_status', __name__)
+FFF_PUT = Blueprint('update_order_status', __name__)
 
 
-@fastfood_update_order_status.route('/api/v1/orders/<int:order_id>', methods=['PUT'])
+@FFF_PUT.route('/api/v1/orders/<int:order_id>', methods=['PUT'])
 def update_order_status(order_id):
     """updates order status
     """
