@@ -12,4 +12,4 @@ class FeedbackResponse:
         """
         Display feedback to users
         """
-        return jsonify({"Feedback": message}), code
+        return jsonify({"message": message}), code
