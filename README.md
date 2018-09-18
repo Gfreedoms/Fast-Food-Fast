@@ -12,7 +12,7 @@ Fast-Food-Fast is a food delivery service app for a restaurant.
 This App exposes endpoints that allows ```customers and hotel owners``` toaccess food and manage orders respectively
 
 - ## Heroku URL
-[FAST FOOD FAST hosted on  heroku ](https://andela.com/)
+[FAST FOOD FAST hosted on  heroku ](https://food-food-fast-api.herokuapp.com/api/v1/orders)
 
 ## Functionality
 
