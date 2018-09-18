@@ -1,18 +1,21 @@
-from flask import Flask, render_template
-from app.api.views.get_specific_order import fastfood_get_specific_order
-from app.api.views.update_order import fastfood_update_order_status
-from app.api.views.delete_order import fastfood_delete_order
-from app.api.views.get_all_orders import fastfood_get_all_orders
-from app.api.views.place_order import fastfood_place_order
+"""
+Module to handle innitialisation code of the modules
+"""
 import os
+from flask import Flask, render_template
+from app.api.views.get_specific_order import FFF_GET_SPECIFIC
+from app.api.views.update_order import FFF_PUT
+from app.api.views.delete_order import FFF_DELETE
+from app.api.views.get_all_orders import FFF_GET
+from app.api.views.place_order import FFF_POST
 
 app = Flask(__name__)
 
-app.register_blueprint(fastfood_get_specific_order)
-app.register_blueprint(fastfood_get_all_orders)
-app.register_blueprint(fastfood_place_order)
-app.register_blueprint(fastfood_update_order_status)
-app.register_blueprint(fastfood_delete_order)
+app.register_blueprint(FFF_GET_SPECIFIC)
+app.register_blueprint(FFF_GET)
+app.register_blueprint(FFF_POST)
+app.register_blueprint(FFF_PUT)
+app.register_blueprint(FFF_DELETE)
 
 app.config['SECRET_KEY'] = os.environ.get(
     'SECRET_KEY', 'Freedoms')

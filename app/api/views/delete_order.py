@@ -1,18 +1,20 @@
-from flask import Blueprint, request, jsonify, json
-from app.api.models import Order, CustomerOrders, FeedbackResponse
+"""
+Module to delete a given food item
+"""
+from flask import Blueprint, request
+from app.api.models import FeedbackResponse
 from app.api.views.customer_orders import customer_orders
 
-fastfood_delete_order = Blueprint('delete_order', __name__)
+FFF_DELETE = Blueprint('delete_order', __name__)
 
 
-@fastfood_delete_order.route('/api/v1/orders/<int:order_id>', methods=['DELETE'])
+@FFF_DELETE.route('/api/v1/orders/<int:order_id>', methods=['DELETE'])
 def delete_order(order_id):
     """
-    deletes order
+    delete a given order given a specific id
     """
     if request.method == "DELETE":
         the_order = customer_orders.deletes_order(order_id)
         if the_order == "order does not exist":
             return FeedbackResponse.display(the_order, 404)
-        else:
-            return FeedbackResponse.display(the_order, 200)
+        return FeedbackResponse.display(the_order, 200)

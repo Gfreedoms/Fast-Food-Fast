@@ -1,10 +1,16 @@
-import unittest
-from app import Order, CustomerOrders, app
+"""
+Module to test the retrieving order module
+"""
 import json
+import unittest
+from app import app
+
 
 
 class TestGetOrders(unittest.TestCase):
-
+    """
+    Class to handle the tests for retrieval of both existing and non exiting orders
+    """
     def test_get_all_ordes(self):
         """
         test the endpoint for retrieving all the orders

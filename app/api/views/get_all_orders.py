@@ -1,11 +1,13 @@
-from flask import Blueprint, request, jsonify, json
-from app.api.models import Order, CustomerOrders
+"""
+Module to  retrieve orders
+"""
+from flask import Blueprint, request, jsonify
 from app.api.views.customer_orders import customer_orders
 
-fastfood_get_all_orders = Blueprint('get_all_orders', __name__)
+FFF_GET = Blueprint('get_all_orders', __name__)
 
 
-@fastfood_get_all_orders.route('/api/v1/orders', methods=['GET'])
+@FFF_GET.route('/api/v1/orders', methods=['GET'])
 def get_all_orders():
     """
     gets all the placed orders
