@@ -71,7 +71,7 @@ class CustomerOrders:
 
         if self.is_order_exist(id):
             self.orders_list.pop(id)
-            return "Order not found"
+            return "Order successfully trashed"
         else:
             return "order not found"
 
