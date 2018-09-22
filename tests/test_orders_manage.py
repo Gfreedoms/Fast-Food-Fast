@@ -2,7 +2,7 @@
 Module to test the methods that handle orders
 """
 import unittest
-from app import Order, CustomerOrders
+from app import app, Order, CustomerOrders
 
 
 class TestOrders(unittest.TestCase):
@@ -23,19 +23,19 @@ class TestOrders(unittest.TestCase):
         """
         pass
 
-    def order_inst_test(self):
+    def test_order_inst(self):
         """
         test order instance
         """
         self.assertIsInstance(self.order, Order)
 
-    def list_inst_test(self):
+    def test_list_inst(self):
         """
         testlist instance
         """
         self.assertIsInstance(self.orders_list, CustomerOrders)
 
-    def place_one_order_test(self):
+    def test_place_one_order(self):
         """
         Test placement of a single order
         """
@@ -43,7 +43,7 @@ class TestOrders(unittest.TestCase):
         self.assertEqual(len(self.orders_list.orders_list), 1)
         self.assertEqual(self.orders_list.orders_list[0].order_id, 0)
 
-    def place_multiple_order_test(self):
+    def test_place_multiple_orders(self):
         """
         test placement of multiple orders
         """
@@ -53,7 +53,7 @@ class TestOrders(unittest.TestCase):
         self.assertEqual(len(self.orders_list.orders_list), 3)
         self.assertEqual(self.orders_list.orders_list[2].order_id, 2)
 
-    def get_orders_test(self):
+    def test_get_orders(self):
         """
         test retrieving orders
         """
@@ -62,7 +62,7 @@ class TestOrders(unittest.TestCase):
         self.orders_list.place_order(self.order)
         self.assertEqual(len(self.orders_list.get_orders()), 3)
 
-    def get_one_order_test(self):
+    def test_get_one_order(self):
         """
         test get one order
         """
@@ -70,7 +70,7 @@ class TestOrders(unittest.TestCase):
         self.orders_list.place_order(self.order)
         self.assertEqual(self.orders_list.get_order(1), self.order)
 
-    def get_non_existing_order_test(self):
+    def test_get_non_existing_order(self):
         """
         test non existing order
         """
@@ -79,26 +79,26 @@ class TestOrders(unittest.TestCase):
         self.assertEqual(self.orders_list.get_order(2),
                          "order does not exist")
 
-    def delete_order_test(self):
+    def test_delete_order(self):
         """
         Delete Order method test
         """
         self.orders_list.place_order(self.order)
         self.orders_list.place_order(self.order)
-        self.assertEqual(self.orders_list.deletes_order(1), "deleted")
+        self.assertEqual(self.orders_list.deletes_order(1), "Order successfully trashed")
         self.assertEqual(len(self.orders_list.get_orders()), 1)
 
-    def delete_non_existing_order_test(self):
+    def test_delete_non_existing_order(self):
         """
         test deletion of non existent order
         """
         self.orders_list.place_order(self.order)
         self.orders_list.place_order(self.order)
         self.assertEqual(self.orders_list.deletes_order(2),
-                         "order not found. check the exixting orders first")
+                         "order not found")
         self.assertEqual(len(self.orders_list.get_orders()), 2)
 
-    def order_update_test(self):
+    def test_order_update(self):
         """
         Test Order update
         """
@@ -106,9 +106,9 @@ class TestOrders(unittest.TestCase):
         self.orders_list.place_order(self.order)
         self.assertEqual(self.orders_list.change_status(
             1, "pending"), "status changed to pending")
-        self.assertEqual(self.orders_list.get_order(1).order_status, "pending")
+        self.assertEqual(self.orders_list.get_order(1).complete, "pending")
 
-    def non_existing_order_test(self):
+    def test_non_existing_order(self):
         """
         Test update of a non existing order
         """
